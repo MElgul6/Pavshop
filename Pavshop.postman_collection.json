@@ -1,0 +1,932 @@
+{
+	"info": {
+		"_postman_id": "7196a685-351a-47fc-95fe-5b88335274eb",
+		"name": "Pavshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/token/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "leyla2@mail.az",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "merdanmerdan",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/cart/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/cart/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/cart/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/cart/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/cart/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/categories/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/categories/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/categories/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/categories/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/categories/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/categories/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/blogs/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU4MzEzOTYwLCJpYXQiOjE2NTgzMTM2NjAsImp0aSI6ImRhYTBjMGNhNzM0YzQ2Yjk5OTRiZTYwOTUyMjFmMjM1IiwidXNlcl9pZCI6MX0.XyOWM4vkm-HbDGFsfsHoDVK3LSW5mSZVyEgoihiKzi8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "cat10",
+							"type": "default"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/blogs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/register/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/products/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/products/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMzkzNTU1LCJpYXQiOjE2NjIzOTE3NTUsImp0aSI6IjM2ZTZjMjdiOGIzNjQ2ODg5M2U3MTQ4ZGIxMjVhYWRhIiwidXNlcl9pZCI6MX0.osCnp0qqPRikmxK-WW0w73EucxQWLeR2Jqhk5NAQ3_8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "product3",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "67",
+							"type": "default"
+						},
+						{
+							"key": "designer",
+							"value": "Elgul",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "blue product",
+							"type": "default"
+						},
+						{
+							"key": "main_image",
+							"type": "file",
+							"src": "/C:/Users/acer/Desktop/yelo bank/yelobank-project-kappa-group/static/images/az.png"
+						},
+						{
+							"key": "category",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "brands",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/products/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/products/1/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyMjEwNTkzLCJpYXQiOjE2NjIyMDg3OTMsImp0aSI6IjljYWZhNjU3MzIxZjRjOGRiN2MwNzBhMjg1MzBiM2NhIiwidXNlcl9pZCI6MX0.N0djXUWyZZSrnpXzavFj6nH8GxT4RlMds3zh2tGq8Xc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "product",
+							"value": "1",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

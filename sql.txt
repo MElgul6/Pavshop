@@ -1,0 +1,32 @@
+
+
+python manage.py shell
+from product.models import Product
+from blog.models import * 
+
+1)c=Recipe.objects.filter(category__title='chair')[:3]
+for i in c:
+    print(i)
+
+2)c=Recipe.objects.filter(category__title__icontains='chair') 
+for i in c:
+    print(i)
+
+from django.db.models import Count  
+
+3) c=Tag.objects.annotate(num_tags=Count('recipe_tag')).order_by('-num_tags')
+
+4) c=Category.objects.annotate(num_cat=Count('product_category')).order_by('-num_cat')  
+
+
+5)c=Recipe.objects.select_related('category') 
+for i in c: 
+    print(i.title)
+
+6)c=Product.objects.filter(category__id=3)  
+for i in c:
+    print(i)
+
+7)c=Product.objects.filter(product_name__icontains='a')[:8]  
+for i in c:
+    print(i)

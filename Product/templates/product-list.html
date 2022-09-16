@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>PAVSHOP PRODUCTS</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li class="active">Data</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Products -->
+    <section class="shop-page padding-top-100 padding-bottom-100">
+      <div class="container">
+        <div class="row"> 
+          
+          <!-- Item Content -->
+          <div class="col-sm-9">
+            <div class="item-display">
+              <div class="row"> 
+                <!-- Products Select -->
+                <div class="col-xs-6">
+                  <div class="pull-left"> 
+                    
+                    <!-- Short By -->
+                    <select class="selectpicker">
+                      <option>Short By</option>
+                      <option>Short By</option>
+                      <option>Short By</option>
+                    </select>
+                    <!-- Filter By -->
+                    <select class="selectpicker">
+                      <option>Filter By</option>
+                      <option>Short By</option>
+                      <option>Short By</option>
+                    </select>
+                    
+                    <!-- GRID & LIST --> 
+                    <a href="#." class="grid-style"><i class="icon-grid"></i></a> <a href="#." class="list-style"><i class="icon-list"></i></a> </div>
+                </div>
+                <div class="col-xs-6 text-right"> <span class="product-num">Showing 1 - 10 of 30 products</span> </div>
+              </div>
+            </div>
+            
+            <!-- Popular Item Slide -->
+            <div class="papular-block row single-img-demos"> 
+              
+              <!-- Item -->
+              {% for product in products %}
+              
+              <div class="col-md-4">
+                <div class="item"> 
+                  <!-- Item img -->
+                  <div class="item-img"> <img class="img-1" src="{{product.main_image.url}}" alt="" >
+                    <!-- Overlay -->
+                    <div class="overlay">
+                      <div class="position-center-center">
+                        <div class="inn"><a href="{% url 'product-detail' product.id %}" >
+                          <i class="icon-magnifier"></i></a> 
+                          
+                          <button data-cart="{{cart.id}}" data-product="{{product.id}}" data-title="{{product.title}}" data-image="{{product.main_image.url}}" data-description="{product.description}" class="update-cart">
+                            
+                          <!-- <a href="#." data-product="{{product.id}}" data-action="add" class="update-cart"> -->
+                          <i class="icon-basket"></i></button>
+                          <a href="{% url 'like_product' product.id %}" ><i class="icon-heart"></i></a></div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!-- Item Name -->
+                  <div class="item-name"> <a href="{% url 'product-detail' product.id %}">{{product.title}}</a>
+                    <p value="description">{{product.description}}</p>
+                  </div>
+                  <!-- Price --> 
+                  <span value="price" class="price"><small>$</small>{{product.price}}</span> </div>
+              </div>
+              {% endfor %}
+              
+            
+            </div>
+            
+            <!-- Pagination -->
+            <ul class="pagination in-center">
+              {% if page_obj.has_previous %}
+              <!-- <a href="?page={{ page_obj.previous_page_number }}">previous</a> -->
+              <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+              {% endif %}
+              {% for page in page_obj.paginator.page_range %}
+                {% if page_obj.number == page %}
+                  
+                  <li class="active"><a href="#">{{ page }}</a></li>
+                {% else %}
+                  
+                  <li><a href="?page={{page}}">{{page}}</a></li>
+                {% endif %}
+              {% endfor %}
+              
+              {% if page_obj.has_next %}
+              <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+              {% endif %}
+            </ul>
+          </div>
+          
+          <!-- Shop SideBar -->
+          <div class="col-sm-3">
+            <div class="shop-sidebar"> 
+              
+              <!-- Category -->
+              <h5 class="shop-tittle margin-bottom-30">category</h5>
+              <ul class="shop-cate">
+                {% for i in category %}
+                 <a href="">{{i.title}}</a> 
+                {% endfor%}
+              </ul>
+              
+              <!-- FILTER BY PRICE -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">FILTER BY PRICE</h5>
+              
+              <!-- TAGS -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">FILTER BY COLORS</h5>
+              <ul class="colors-shop">
+               
+                {% for property_value in property_values %}
+                  <li><a href="#." style="background: {{property_value.title}}"></a></li>
+                {% endfor %}
+
+              </ul>
+              
+              <!-- TAGS -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">PAUPLAR TAGS</h5>
+              <ul class="shop-cate">
+                <li>
+                  {% for i in tag %}
+                    <a href="#.">{{i.title}}</a>
+                  {% endfor%}
+                </li>
+              </ul>
+              
+              <!-- BRAND -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">brands</h5>
+              <ul class="shop-cate">
+                <li>
+                  {% for i in brand %}
+                    <a href="#.">{{i.title}}</a>
+                  {% endfor%}
+                </li>
+                
+              </ul>
+              
+              <!-- SIDE BACR BANER -->
+              <div class="side-bnr margin-top-50"> <img class="img-responsive" src="{% static 'images/sidebar-bnr.jpg' %}" alt="">
+                <div class="position-center-center"> <span class="price"><small>$</small>299</span>
+                  <div class="bnr-text">look
+                    hot
+                    with
+                    style</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+     
+  </div>
+  
+{% endblock %} 

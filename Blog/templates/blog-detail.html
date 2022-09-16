@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+{% load thumbnail %}
+
+{% load custom_tags %}
+
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>THE unique CHAIR BY PAVSHOP</h4>
+        The pain itself is love, the main reason is the customer. It's the biggest entrance to the vehicles.
+          But the immune system, the earth or the sad place, the backyard </ p >
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li class="active">BLOg details</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Blog List -->
+    <section class="blog-list blog-list-3 single-post padding-top-100 padding-bottom-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9"> 
+            
+            <!-- Article -->
+            <article>    
+              <!-- Tittle -->
+              <div class="post-tittle left"> <a href="#." class="tittle">{{blog.title}}</a> 
+                <!-- Post Info --> 
+                <span><i class="primary-color icon-user"></i> {{blog.author}} </span> <span><i class="primary-color icon-calendar"></i> {{blog.created_at|date:"F d, Y"}}</span> <span><i class="primary-color icon-bubble"></i>{{number_comments}}</span> <span><i class="primary-color icon-tag"></i> {{blog.category.title}}</span> </div>
+              <!-- Post Content -->
+              <div class="text-left">
+
+                <!-- Post Img --> 
+                <img class="img-responsive margin-top-50 margin-bottom-50" src="{{blog.image|thumbnail_url:'a'}}" alt="" >
+                {{blog.content}}
+                
+                <!-- Tags -->
+                <div class="row margin-top-50">
+                  <div class="col-md-8">
+                    <h5 class="shop-tittle">PRODUCT TAGS</h5>
+                    <ul class="shop-tags padding-left-15">
+                      {% for tag in tags %}
+                        <li><a href="#.">{{tag.title}}</a></li>
+                      {% endfor %}
+                
+                    </ul>
+                  </div>
+                  
+                  <!-- Share With -->
+                  <div class="col-md-4">
+                    <h5 class="shop-tittle">share with</h5>
+                    <ul class="share-post">
+                      <li><a href="#."><i class="icon-social-facebook"></i> Facebook</a></li>
+                      <li><a href="#."><i class="icon-social-twitter"></i> twitter</a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- ADMIN info -->
+                <div class="admin-info">
+                  <div class="media-left">
+                    <div class="admin-pic"> <img src="{% static 'images/admin-avatar.jpg' %}" alt=""> </div>
+                  </div>
+                  <div class="media-body">
+                    <h6>NATASHA S. <span>Co-Founder</span></h6>
+                    The pain itself is love, the main reason is the customer. Morbi et scelerisque mauris. Even the members of a no-traffic deck. Now at the flattering ne, bociis natoque penatcing e chocolate miscing elit. </ p >
+                    <div class="admin-social"> <a href="#."><i class="icon-social-facebook"></i></a> <a href="#."><i class="icon-social-twitter"></i></a> <a href="#."><i class="icon-social-dribbble"></i></a> <a href="#."><i class="icon-envelope"></i></a> </div>
+                  </div>
+                </div>
+                
+                <!--=======  COMMENTS =========-->
+                <div class="comments margin-top-80">
+                  <h5 class="shop-tittle margin-bottom-30">COMMENTS</h5>
+                  <ul class="media-list padding-left-15">
+                    {% for comment in comments %}
+                    <!--=======  COMMENTS =========-->
+                    <li class="media">
+                      <div class="media-left"> <a href="#" class="avatar"> <img class="media-object img-responsive" src="{{comment.author.image.url}}" alt=""> <br></div>
+                      <div class="media-body">
+                          <h6 class="media-heading">{{comment.author}} <span><i class="icon-clock primary-color"></i> {{comment.created_at}}</span></h6>
+                          <p>{{comment.comment}} </p>
+                          <a href="#." class="raply"><i class="icon-bubble primary-color"></i> Reply</a> </div>
+                        
+                    </li >
+                    {% endfor %}
+                    
+                  <hr>
+                  
+                  <!--=======  LEAVE COMMENTS =========-->
+                  <h5 class="shop-tittle margin-top-80">POST YOUR COMMENTS</h5>
+                  <form method="POST" class="padding-left-15" >
+                    {% csrf_token %}
+                    <ul class="row">
+                      <li class="col-sm-4">
+                        <label>COMMENTS
+                          {{form.comment}}
+                        </label>
+                      </li >
+                      <li class="col-sm-4">
+                        </label>
+                      </li >
+                      <li class="col-sm-12">
+                        </label>
+                      </li >
+                      <li class="col-sm-12">
+                        <button type="submit" class="btn margin-top-30">Submit Comment </button>
+                      </li >
+                    </ul>
+                  </form>
+                </div>
+              </div>
+            </article>
+            <hr>
+            
+            <!--  You May Like -->
+            <h5 class="shop-tittle margin-top-50 margin-bottom-50">you may like </h5>
+            <div class="alos-like padding-left-15"> 
+              <!-- Article -->
+              {% for related_blog in related_blogs %}
+             
+              <article>
+                <div class="row">
+                  <div class="col-sm-5"> 
+                    <!-- Post Img --> 
+                    <img class="img-responsive" src="{{related_blog.image.url}}" alt="" > </div>
+                  <div class="col-sm-7"> 
+                    <!-- Tittle -->
+                    <div class="post-tittle left"> <a href="#." class="tittle"> {{related_blog.title}}</a> 
+                      <!-- Post Info --> 
+                      <span><i class="primary-color icon-user"></i>{{related_blog.author}} </span> <span><i class="primary-color icon-calendar"></i>{{related_blog.created_at|date:"F d, Y"}}</span> <span><i class="primary-color icon-bubble"></i>{{number_comments}}</span> <span><i class="primary-color icon-tag"></i>{{related_blog.category.title}}</span> </div>
+                    <!-- Post Content -->
+                    <div class="text-left">
+                      <p>{{related_blog.short_description}} </p>
+                      <a href="/blog/{{related_blog.id}}" class="red-more">READ MORE</a> </div>
+                  </div>
+                </div>
+              </article>
+              {%endfor%}
+
+            
+            </div>
+          </div>
+          
+          <! - Sider Bar ->
+          <div class="col-md-3">
+            <div class="shop-sidebar"> 
+              
+              <!-- SEARCH -->
+              <div class="search">
+                <input class="form-control" type="search" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </div>
+              
+              <!-- Category -->
+              <h5 class="shop-tittle margin-bottom-30">category</h5>
+              <ul class="shop-cate">
+                {% for category in categories %}
+                  <li><a href="#"> {{category.category__title}} <span>{{category.count}}</span></a></li>
+                  </span></a></li>
+                {% endfor %}
+              </ul>
+              <!-- Recent Post -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">recent post</h5>
+              <ul class="papu-post margin-top-20">
+                {% for recent_post in recent_posts %}
+                  <li class="media">
+                      <div class="media-left"> <a href="#"> <img class="media-object" src="images/sm-post-1.jpg" alt=""></a> </div>
+                      <div class="media-body"> <a class="media-heading" href="#."> {{recent_post.short_description}}
+                         </a >  <span span > {{recent_post.created_at|date:"F d, Y"}} </span >  </div >
+                    </li >
+                {% endfor %}
+              </ul>
+              
+              <!-- TAGS -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">PAUPLAR TAGS</h5>
+              <ul class="shop-tags">
+                {% get_populars_tag as tags %}
+                {% for tag in tags %}
+                  <li><a href="#.">{{tag.title}}</a></li> 
+                {% endfor %} 
+              </ul>
+              
+              <!-- BRAND -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">archives</h5>
+              <ul class="shop-cate">
+                <li><a href="#."> January 2015 </a></li>
+                <li><a href="#."> February 2015 </a></li>
+                <li><a href="#."> March 2015 </a></li>
+                <li><a href="#."> April 2015 </a></li>
+                <li><a href="#."> May 2015 </a></li>
+              </ul>
+              
+              <! - SIDE BACR BANER ->
+              <div class="side-bnr margin-top-50"> <img class="img-responsive" src="images/sidebar-bnr.jpg" alt="">
+                <div class="position-center-center"> <span class="price"><small>$</small>299</span>
+                  <div class="bnr-text">look
+                    hot
+                    with
+                    style</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Culture BLOCK -->
+    <section class="cultur-block">
+      <ul>
+        <li> <img src="{% static 'images/image16.jpeg' %}" alt="" > </li>
+        <li> <img src="{% static 'images/image16.jpeg' %}" alt="" > </li>
+        <li> <img src="{% static 'images/image16.jpeg' %}" alt="" > </li>
+        <li> <img src="{% static 'images/image16.jpeg' %}" alt="" > </li>
+      </ul>
+      
+      <!-- Culture Text -->
+      <div class="position-center-center">
+        <div class="container">
+          <div class="col-sm-6 center-block">
+            <h4>FOLLOW US @ INSTAGRAM</h4>
+            < p > Phasellus lacinia fermentutm bibendum. Sometimes the strokes are not too bad. No moms
+              eros or fermentation, the pain arises in the ex. </ p >
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- News Letter -->
+    <section class="news-letter padding-top-150 padding-bottom-150">
+      <div class="container">
+        <div class="heading light-head text-center margin-bottom-30">
+          <h4>NEWSLETTER</h4>
+          Phasellus lacinia fermentum bibendum. Sometimes the hunger and the Vikings, and the lakes before him, I hate to put down football </ div >  </ div >
+        <form>
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">SEND ME</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  
+   {% endblock %}

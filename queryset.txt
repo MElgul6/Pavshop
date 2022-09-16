@@ -1,0 +1,44 @@
+from Blog.models import*
+Recipe.objects.all()
+<QuerySet [<Recipe: Recipe object (1)>, <Recipe: Recipe object (2)>, <Recipe: Recipe object (3)>]>
+>>> Recipe.objects.all()[:3]
+<QuerySet [<Recipe: Recipe object (1)>, <Recipe: Recipe object (2)>, <Recipe: Recipe object (3)>]>
+>>>Recipe.objects.all().order_by('-created_at')
+<QuerySet [<Recipe: Recipe object (3)>, <Recipe: Recipe object (2)>, <Recipe: Recipe object (1)>]>
+>>> recipe1.comments.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'comments'
+recipe1 = recipe.objects.filter(id=1)
+recipe1
+>>> recipe1[0].comments.all()
+<QuerySet [<Comment: Comment object (1)>, <Comment: Comment object (3)>]>
+>>>
+
+from Product.models import*
+ Product.objects.filter()
+<QuerySet [<Product: Product object (1)>]>
+>>> product1 = Product.objects.filter(id=1)
+>>> product1
+ product1[0].reviews.all()
+<QuerySet [<Review: Review object (1)>]>
+>>>
+
+>>> from Product.models import*
+>>> from django.db.models import Count
+>>> category_query = Category.objects.annotate(pro=Count('product_category'))
+>>> list = []
+>>> for cat in category_query:
+...     if cat.pro >0:
+...             list.append(cat)
+...
+>>> list
+[<Category: category1>, <Category: category 2>]
+
+
+>>> a = Product.objects.filter(category__title__icontains = "category1")
+>>> a
+<QuerySet [<Product: 1 >, <Product: product3 >]>
+
+
+

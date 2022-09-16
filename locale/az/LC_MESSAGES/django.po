@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-07 17:40+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\Core\templates\partials\navbar.html:31
+msgid "Home"
+msgstr ""
+
+#: .\Core\templates\partials\navbar.html:32
+msgid "Blogs"
+msgstr ""
+
+#: .\Core\templates\partials\navbar.html:33
+msgid "Product List"
+msgstr ""
+
+#: .\Core\templates\partials\navbar.html:34
+msgid "Shopping Cart"
+msgstr ""
+
+#: .\Core\templates\partials\navbar.html:35
+msgid "Contact"
+msgstr ""
+
+#: .\Core\templates\partials\navbar.html:36
+msgid "About"
+msgstr ""
+
+#: .\Core\templates\partials\navbar.html:64
+msgid "LOGIN"
+msgstr ""
+
+#: .\Core\views.py:64
+msgid "Mesajiniz qebul olundu"
+msgstr ""
+
+#: .\User\forms.py:25
+msgid "Password"
+msgstr ""
+
+#: .\User\forms.py:32
+msgid "Password confirmation"
+msgstr ""
+
+#: .\User\forms.py:36
+msgid "Enter the same password as before, for verification."
+msgstr ""
+
+#: .\User\models.py:7
+msgid "email address"
+msgstr ""
